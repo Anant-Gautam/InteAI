@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InteAI</title>
+
+</head>
+<body>
+    <h1>InteAI</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <textarea class="place-holder" name="text" cols="50" rows="10" placeholder="Write here..."></textarea><br>
+        <button type="submit">Submit</button>
+        <p>{{ output }}</p>
+    </form>
+</body>
+</html>
