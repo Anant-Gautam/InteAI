@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>InteAI</title>
+    <link rel="stylesheet" type="text/css" href="./static/Styles.css" />
+    <link rel="icon" type="image/png" href="C:\Users\EC302WS\OneDrive\Desktop\palmve\artificial-intelligence-icon.jpg">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
 
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>InteAI</h1>
+    <p class="Header">Inte<strong>AI</strong></p>
     <form action="{{ url_for('submit') }}" method="post">
-        <textarea class="place-holder" name="text" cols="50" rows="10" placeholder="Write here..."></textarea><br>
-        <button type="submit">Submit</button>
-        <p>{{ output }}</p>
+        <div class="form">
+            <textarea id="input" class="place-holder" name="text" cols="155" rows="5" placeholder="Write here..."></textarea><br>
+            <button class="button" type="submit"><img class="button-image" src="https://cdn-icons-png.flaticon.com/128/3682/3682321.png"></button>
+        </div>
+        <div class="question-display">
+            <p class="question-display-p">{{ ques }}</p>
+        </div>
+        <div class="output-div">
+            <p class="output">{{ output }}</p>
+        </div>
     </form>
+
 </body>
 </html>
